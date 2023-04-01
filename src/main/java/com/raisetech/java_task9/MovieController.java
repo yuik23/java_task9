@@ -9,15 +9,16 @@ import java.util.List;
 public class MovieController {
 
   // フィールド
-  private final MovieMapper movieMapper;
+  private final MovieService movieService;
 
   // コンストラクター
-  public MovieController(MovieMapper movieMapper) {
-    this.movieMapper = movieMapper;
+  public MovieController(MovieService movieService) {
+
+    this.movieService = movieService;
   }
 
   @GetMapping("/movies")
   public List<Movie> movies() {
-    return movieMapper.findAll();
+    return movieService.findAll();
   }
 }
