@@ -21,4 +21,5 @@ public class MovieController {
   public List<Movie> movies() {
     return movieService.findAll();
   }
+  
 }
